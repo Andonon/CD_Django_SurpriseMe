@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Surprse Me Results!</title>
+    <meta description='Results page for Surprise Me App'
+    <meta charset='utf-8'/>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'game/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'game/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'ninjas/favicon.ico' %}">
+
+</head>
+<body>
+    <div id='wrapper'>
+        <h1>Results</h1>
+        <ul>
+            {% for each in messages %}
+            <li>{{ each }}</li>
+            {% endfor %}
+        </ul>
+        <a href='/'>Try again</a>
+    </div>
+</body>
+</html>
